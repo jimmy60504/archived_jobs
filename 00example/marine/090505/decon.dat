@@ -1,0 +1,56 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090505_g_f_gh_f2                                                        
+PKEYLST         
+814     4310    
+*CALL   HEADPUT WBT                                     
+ATTRI   CDP     WBT1    WBT     CDP             
+*CALL   HDRMATH         
+DEFINE  vt0     FLOAT           
+HCMUL   WBT     1.6     vt0     
+DEFINE  frac    FLOAT           
+HHDIV   offset  vt0     frac    
+DEFINE  fracsq  FLOAT           
+HCPOW   frac    2       fracsq  
+DEFINE  fracsq1 FLOAT           
+HCADD   fracsq  1       fracsq1 
+DEFINE  sqrt    FLOAT           
+HCPOW   fracsq1 0.5     sqrt    
+DEFINE  sqrt1   FLOAT           
+HCSUB   sqrt    1       sqrt1   
+DEFINE  NMO     FLOAT           
+HHMUL   WBT     sqrt1   NMO     
+DEFINE  STATIC  FLOAT           
+HHADD   WBT     NMO     STATIC  
+*CALL   FILTER                                  MINIMUM 
+BAND                            
+                2       16      90      120     
+*CALL   STATIC  STATIC  REMOVE  -1000                   
+*CALL   DECONA                                                  
+KEYDEF  1       1       468     
+GAP     50      ZCROSS  2               
+1500    15000   1500    15000   0       15000   0       15000   
+*CALL   STATIC  STATIC          -1000                   
+*CALL   FILTER                                  MINIMUM 
+BAND                            
+                2       16      90      120     
+*CALL   HEADDEL 
+ENTRIES         
+vt0     
+ENTRIES         
+frac    
+ENTRIES         
+fracsq  
+ENTRIES         
+fracsq1 
+ENTRIES         
+sqrt    
+ENTRIES         
+sqrt1   
+ENTRIES         
+NMO     
+ENTRIES         
+STATIC  
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2_d                                                      
+*END            

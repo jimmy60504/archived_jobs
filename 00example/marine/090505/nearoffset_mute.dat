@@ -1,0 +1,21 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090534_g_se_f_ti_ms_f2_d                                                
+ORDER   cdp     offset  
+PKEYLST         
+484     28655   
+*IF             
+RANGE   cdp             21000   
+*IF             
+RANGE   offset          800     
+*CALL   HEADPUT WBT                                     
+ATTRI   cdp     WBT2    WBT     CDP             
+*CALL   HDRMATH         
+HCMUL   WBT     2       2WBT    
+*CALL   STATIC  2WBT    REMOVE  -15000                  
+*CALL   STATIC  2WBT            -15000                  
+*RESET          
+*RESET          
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090534_g_se_f_ti_ms_f2_d_mute                                           
+*END            

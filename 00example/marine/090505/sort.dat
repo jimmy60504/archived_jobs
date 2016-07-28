@@ -1,0 +1,10 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090501_g_se_f_ti_ms_gh_f_dec_s                                          
+*CALL   SORT    64      9999999 
+KEYS            
+cdp                                     
+offset                                  
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090501_g_se_f_ti_ms_gh_f_dec_s_CDP                                      
+*END            

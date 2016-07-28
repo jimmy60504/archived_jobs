@@ -1,0 +1,31 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   cdp             
+LABEL   090505_g_f_gh_f2_d_s_w                                                  
+PKEYLST         
+6988    35423   
+*CALL   NMO                             
+VEL             
+vel_1                                                                           
+*CALL   MUTE                            
+STRETCH 30                              
+vel_1                                                                           
+#*CALL   ANGTR           
+ANGLE   2       60      
+VEL             
+vel_1                                                                           
+*CALL   STACK                                   
+*CALL   FILTER                                  MINIMUM         
+BAND    HP                      
+                5       10                      
+**SCALE
+*CALL   BALANCE         
+*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+*CALL   AGC     3000            
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2_d_s_w_Stack_v1                                         
+#*CALL   GOUT                                            
+TAPEOPT -tapefile /home/renn/Desktop/090534_Brutestack.segy                     
+*END            

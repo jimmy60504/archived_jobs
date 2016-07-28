@@ -1,0 +1,13 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   Time Migrated Section                                                   
+ORDER   cdp             
+*CALL   COHERE  20      13                              cdp     
+                
+TVFILT  1       
+0       2000    -3      3                                       
+3000    4000    -2      2                                       
+5000    15000   -1      1                                       
+#*CALL   DSOUT                                           
+LABEL                                                                           
+*END            

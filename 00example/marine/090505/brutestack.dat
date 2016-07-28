@@ -1,0 +1,22 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   cdp             
+LABEL   090505_g_f_gh_f2_d_s                                                    
+PKEYLST         
+6988    35423   
+*CALL   VFNDEF  cdp                             OVERWRT 
+VFUNC   100             
+0       1600    
+VFLABEL         
+vel1600                                                                         
+*CALL   NMO                             
+VEL             
+vel1600                                                                         
+*CALL   MUTE                            
+STRETCH                                 
+vel1600                                                                         
+*CALL   STACK                                   
+*CALL   BALANCE         
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2_d_s_Stack                                              
+*END            

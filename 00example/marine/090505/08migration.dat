@@ -1,0 +1,16 @@
+*JOB            
+*CALL   DSIN    12000                   
+LABEL   090505_g_f_gh_f2_d_s_w_r_Stack_v1                                       
+PKEYLST         
+6988    35423   
+*CALL   MIGDMO  99999           6.25    
+USERVEL         
+0       2000    2000    2000    4000    2000    6000    2000    
+8000    2000    10000   2000    12000   2000    
+FKMIG           
+*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2_d_s_w_r_Stack_v1_fkmig12                               
+*END            

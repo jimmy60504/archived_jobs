@@ -1,0 +1,17 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   SHOT    SOFFSET 
+LABEL   090505_g_f_gh_f2_d                                                      
+PKEYLST         
+814     4310    
+*CALL   UNIFORM                         NRSTOF                  
+SKEYLST         -6000   12.5            
+*CALL   SMACTRM 80      2               
+SPREAD  -6000   -162.5  12.5                    
+HANDVEL         
+0       1500    3000    1700    4500    2000    
+*CALL   SMACMS  SOFFSET         PONLY                           
+WINDOW                          300     
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2_d_s                                                    
+*END            

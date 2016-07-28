@@ -1,0 +1,9 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   OBS.FDstackv1FXD                                                        
+*CALL   DEPCON          40000   5       
+VEL             
+v7                                                                              
+*CALL   DSOUT   OVERWRT                                 
+LABEL   OBS.final                                                               
+*END            

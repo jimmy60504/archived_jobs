@@ -1,0 +1,7 @@
+*JOB            
+*CALL   NAVDSK  UKOOA90 468                     
+FILE    MGL0905_01.p190                                                         
+*CALL   UKP2                                            
+*CALL   NAVWRT  1       3037    468                     
+FILE    ABC                                                                     
+*END            

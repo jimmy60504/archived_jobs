@@ -1,0 +1,16 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   TaChia.FF                                                               
+*CALL   FILTER                                          
+BANDSL                          
+                20      20      200     20      
+*CALL   DECONA                                                  
+KEYDEF  1       1       192     
+GAP     200     ZCROSS  2               
+150     1024    300     1024    0       1024    0       1024    
+*CALL   FILTER                                          
+BANDSL                          
+                20      20      200     20      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   TaChia.FFD                                                              
+*END            

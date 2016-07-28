@@ -1,0 +1,14 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   TaChia.FFDRFs2                                                          
+#*CALL   AGC     100             
+*CALL   MIGTX   2500    1                               
+VSCALE          100     10      
+VEL             
+v04                                                                             
+*CALL   FILTER                                          
+BANDSL  HP                      
+                40      20                      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   TaChia.mig                                                              
+*END            

@@ -1,0 +1,32 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   cdp     offset  
+LABEL   090505_g_f_gh_f2_d_s_w                                                  
+PKEYLST         
+6988    35423   
+*CALL   NMO                             
+VEL             
+vel_1                                                                           
+*CALL   HEADPUT WBT                                     
+ATTRI           WBT1    WBT     CDP             
+*CALL   MUTE                            
+STRETCH 45                              
+vel_1                                                                           
+*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+*CALL   RADNPAR 6000    HRFREQ                  
+FORWARD 500     -800    1500    
+TGATE                   WBT     15000   
+FILTER          
+        -250    -150    450     550     
+INVERSE                 
+*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+*CALL   NMO     NMOREM                  
+VEL             
+vel_1                                                                           
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2_d_s_w_r                                                
+*END            

@@ -1,0 +1,10 @@
+*JOB            
+*CALL   DSIN                            
+RANGE   100     4400    100     200     
+LABEL   HX7_A.FMSD                                                              
+ORDER   cdp     offset  
+*CALL   AGC     80              
+*CALL   VELDEF          MODIFY  
+VEL             
+v2                                                                              
+*END            

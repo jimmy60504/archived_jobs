@@ -1,0 +1,11 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   OBS.F                                                                   
+*CALL   SUPPRES                         
+FBAND   0.01    100                     
+*CALL   FILTER                                  MINIMUM 
+BANDSL  BP                      
+                0.01    30      40      30      
+*CALL   DSOUT   APPEND                                  
+LABEL   OBS.FS                                                                  
+*END            

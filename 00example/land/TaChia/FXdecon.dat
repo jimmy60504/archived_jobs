@@ -1,0 +1,8 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   TaChia.FFDRFstack                                                       
+*CALL   FXDECON                                                 
+METHOD  PROJECT 
+*CALL   DSOUT   OVERWRT                                 
+LABEL   TaChia.FFDRFs2                                                          
+*END            

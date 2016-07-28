@@ -1,0 +1,18 @@
+*JOB            
+*CALL   MKDATA                          
+*CALL   GEOM2D          
+ORIGIN          -359941 2424785 0       
+POINTS          
+480     -363836 2429973 0       
+15300   -515426 2540056 0       
+*CALL   PATTERN 9999    YES             
+PSTAT   480     
+1       1       
+468     468     
+*CALL   SOURCE                  
+SHOT    748     480                     9999            
+THRU    4453    4                               
+#*CALL   GEOM2D  CDPS    
+ORIGIN  2       -359941 2424785 0       
+SCATTER 6.25    100     
+*END            

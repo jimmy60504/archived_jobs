@@ -1,0 +1,9 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   F2.GERFFDRstack                                                         
+*CALL   FXDECON         200     20                              
+ADDBACK         
+        10      
+#*CALL   DSOUT   OVERWRT                                 
+LABEL   F2.GEFFdmostackFX                                                       
+*END            

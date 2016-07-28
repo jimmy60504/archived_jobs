@@ -1,0 +1,12 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   DaTunSan.geom                                                           
+ORDER   rec_statshot    
+*CALL   EDIT    rec_stat        
+ALL                     
+48      49      50      51      83      210     290     294     
+301     302     326     327     328     445     454     485     
+513     568     
+*CALL   DSOUT   OVERWRT                                 
+LABEL   DaTunSan.E                                                              
+*END            

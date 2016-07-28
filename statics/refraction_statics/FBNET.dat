@@ -1,0 +1,9 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   E1P.EF                                                                  
+ORDER   shot    offset  
+PKEYLST         
+101     220     
+*CALL   AGC                     
+*CALL   FBNET   2829                            PICK1   
+*END            

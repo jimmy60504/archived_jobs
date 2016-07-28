@@ -1,0 +1,16 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   DD1GEFLvs                                                               
+ORDER   cdp     offset  
+*CALL   AGC     200             
+*CALL   NMO                             
+VEL             
+v01                                                                             
+*CALL   MUTE                            
+STRETCH 30                              
+v01                                                                             
+*CALL   STACK                                   
+*CALL   BALANCE         
+*CALL   DSOUT   OVERWRT                                 
+LABEL   DD1GEFLvsStack                                                          
+*END            

@@ -1,0 +1,22 @@
+*JOB            
+*CALL   DSIN                            
+SGATHER 7               
+LABEL   F2.GDEF                                                                 
+ORDER   cdp     offset  
+RANGE   38      1092                    
+*CALL   NMO     NOMUTE                  
+VEL             
+v0                                                                              
+*CALL   MUTE                            
+STRETCH 150                             
+v0                                                                              
+*CALL   INTRP5D         ALFT    ON      
+SPREAD  144     32      47                              
+WINDOWS 1000    5               
+DFTPARS 20              20              
+*CALL   NMO     NMOREM                  
+VEL             
+v0                                                                              
+*CALL   DSOUT   OVERWRT                                 
+LABEL   F2.GDEFI                                                                
+*END            

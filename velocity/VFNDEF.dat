@@ -1,0 +1,8 @@
+*JOB            
+*CALL   MKDATA                          
+*CALL   VFNDEF  cdp                                     
+VFUNC   1               
+0       1500    
+VFLABEL         
+v1500                                                                           
+*END            

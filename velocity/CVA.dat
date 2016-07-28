@@ -1,0 +1,15 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   cdp     offset  
+LABEL   F2.EFFRD                                                                
+*CALL   AGC     100             
+*CALL   CVA     1580    3000                                    
+VELC            
+2000    25      240     
+*CALL   BALANCE         
+*CALL   FILTER                                          
+BANDSL                          
+                35      20      200     20      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   F2.EFFRDcvs                                                             
+*END            

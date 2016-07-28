@@ -1,0 +1,17 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   DD1GEFL                                                                 
+ORDER   shotchanshot    
+PKEYLST         
+101001  196360  
+*CALL   BALANCE         
+*CALL   VSTACK          shotchanshot    KEEP            NOAUX   
+INC             
+1       1       
+*CALL   SORT    360     9999999 
+KEYS            
+shot                                    
+chan                                    
+*CALL   DSOUT   OVERWRT                                 
+LABEL   DD1GEFLvs                                                               
+*END            

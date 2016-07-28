@@ -1,0 +1,27 @@
+*JOB            
+*CALL   DSIN            0       14000   
+ORDER   CDP     OFFSET  
+LABEL   18N_GFDD                                                                
+PKEYLST         
+15283   15283   
+#*CALL   HEADPUT WBT                                     
+ATTRI   CDP     MU      MU      CDP             
+#*CALL   STATIC  WBT     REMOVE  -7500                   
+*CALL   NMO                             
+VEL             
+vel1530                                                                         
+*CALL   COHERE  30      25                      WITHIN  CDP     
+REJECT  0       
+TVFILT  1       
+0       7000    0       0                                       
+7250    14000   -10     10                                      
+*CALL   NMO     NMOREM                  
+VEL             
+vel1530                                                                         
+#*CALL   STATIC  WBT             -7500                   
+#*CALL   SORT    468     999999  
+KEYS            
+shot                            
+#*CALL   DSOUT   OVERWRT                                 
+LABEL   18N_GFSDR2KLFd                                                          
+*END            

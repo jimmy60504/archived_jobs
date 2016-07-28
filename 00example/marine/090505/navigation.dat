@@ -1,0 +1,6 @@
+*JOB            
+*CALL   NAVDSK  UKOOAP1 468                     
+FILE    /mnt/6T_D/MCS/sgd/nav/MGL0905_05.0.p190                                 
+*CALL   NAVWRT  1       4310    468                     
+FILE    /home/renn/Desktop/Job/marine/090505/090505.fmt                         
+*END            

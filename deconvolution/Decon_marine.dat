@@ -1,0 +1,23 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   shot    chan    
+LABEL   HX7_A.FMS                                                               
+PKEYLST         
+98      848     
+*CALL   HEADPUT WBT                                     
+ATTRI   cdp     WBT     WBT     CDP             
+*CALL   FILTER                                  MINIMUM         
+BANDSL  BP                      
+                4       30      800     30      
+*CALL   STATIC  WBT     REMOVE  -40                     
+*CALL   DECONA                                          HANN    
+KEYDEF  1       1       24      
+GAP     200     ZCROSS  2               
+200     3000    600     3000    0       3000    0       3000    
+*CALL   STATIC  WBT             -40                     
+*CALL   FILTER                                  MINIMUM         
+BANDSL  BP                      
+                4       30      800     30      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_A.FMSD                                                              
+*END            

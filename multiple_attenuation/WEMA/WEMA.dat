@@ -1,0 +1,26 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090505_g_f_gh_f2_d_s                                                    
+ORDER   SHOT    offset  
+PKEYLST         
+814     4310    
+#*CALL   HEADPUT WBT                                     
+ATTRI   cdp     WBT2    WBT     CDP             
+#*CALL   HDRMATH         
+HCSUB   WBT     8       SWBT    
+HCADD   cdpy    8       shotdep 
+HCADD   cdpy    9       recdep  
+*CALL   WEMA    12.5                    1600    10              
+STREAMR chan    12.5    6000                            
+SMACMSW                                         
+VEL             
+vel1600                                                                         
+#*CALL   WEMA    12.5            SWBT    1600    10              
+HEADERS                                 shotdep recdep  
+STREAMR chan    12.5    6000                            
+SMACMSW                                         
+VEL             
+vel1600                                                                         
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2_d_s_w                                                  
+*END            

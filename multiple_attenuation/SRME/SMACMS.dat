@@ -1,0 +1,10 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   SMACTRM                                                                 
+PKEYLST         
+98      848     
+*CALL   SMACMS  soffset         PONLY                           
+WINDOW                  50      25      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_A.FMS2                                                              
+*END            

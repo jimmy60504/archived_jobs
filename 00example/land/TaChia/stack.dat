@@ -1,0 +1,26 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   TaChia.edit                                                             
+ORDER   CDP             
+*CALL   GAIN                    
+SPHDIV                                  
+VEL             
+v04                                                                             
+*CALL   BALANCE         
+*CALL   NMO                             
+VEL             
+v04                                                                             
+*CALL   MUTE                            
+VFMUTE          
+top                                                                             
+*CALL   MUTE                            
+STRETCH                                 
+v04                                                                             
+*CALL   STACK                                   
+**SCALE
+*CALL   FILTER                                          
+BANDSL                          
+                20      20      880     20      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   TaChia.Estack2                                                          
+*END            

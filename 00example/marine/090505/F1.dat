@@ -1,0 +1,13 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090505_g                                                                
+ORDER   shot    chan    
+PKEYLST         
+814     4310    
+*CALL   FILTER                                  MINIMUM 
+BAND    HP              20      
+                9       45                      
+*CALL   TFCLEAN                                                 
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f                                                              
+*END            

@@ -1,0 +1,11 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090505                                                                  
+PKEYLST         
+814     4310    
+#*CALL   MARINE  4310    468     468     164     12.5    50      
+1               
+*CALL   GEOMLD                                  
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g                                                                
+*END            

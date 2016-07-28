@@ -1,0 +1,15 @@
+*JOB            
+*CALL   SEGD    15360   2       468     8058    6250            
+TAPEOPT -flist /home/renn/Desktop/Job/marine/input_file3.list                   
+BLKSIZE 64      
+FHDRDEF         
+shot            GENERAL 73              BYTE    
+RECORD  1               INCR    6336                    
+                
+*CALL   FILTER                                  MINIMUM 
+BAND    LP                      
+                                125     125     
+*CALL   RESAMP  4       15000   NOFILTER        
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090520                                                                  
+*END            

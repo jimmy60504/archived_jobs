@@ -1,0 +1,30 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   shot    chan    
+LABEL   090505_g_f_gh                                                           
+*CALL   HEADPUT WDEPTH                                  
+ATTRI   CDP     WBT1    WBT     CDP             
+*CALL   FILTER                                  MINIMUM 
+BAND    HP              20      
+                9       45                      
+*CALL   GAIN                    
+SPHDIV                                  
+VEL             
+vel1600                                                                         
+*CALL   TFCLEAN                                                 
+*CALL   AMPSCAL                                         
+GATES           
+                                        
+*CALL   NMO                             
+VEL             
+vel1600                                                                         
+*CALL   SUPPRES                         
+FBAND   0       9                       
+*CALL   STATIC  WDEPTH  REMOVE                          
+*CALL   STATIC  WDEPTH                                  
+*CALL   NMO     NMOREM                  
+VEL             
+vel1600                                                                         
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2                                                        
+*END            

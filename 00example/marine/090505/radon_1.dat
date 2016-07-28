@@ -1,0 +1,65 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   cdp             
+LABEL   090505_g_f_gh_f2_d_s                                                    
+PKEYLST         
+15601   31100   
+*CALL   NMO                             
+VEL             
+vel_1                                                                           
+*CALL   HEADPUT WBT                                     
+ATTRI           WBT1    WBT     CDP             
+*CALL   HDRMATH         
+HCMUL   WBT     2       2WBT    
+#*CALL   HDRMATH         
+HCMUL   WBT     3       3WBT    
+#*CALL   HDRMATH         
+HCMUL   WBT     4       4WBT    
+*CALL   MUTE                            
+STRETCH 45                              
+vel_1                                                                           
+*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+*CALL   RADNPAR 6000    HRFREQ                  
+FORWARD 800     -2500   2500    
+FILTER          
+        -600    -500    500     600     
+TGATE                   WBT     2500    
+INVERSE                 
+*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+*CALL   RADNPAR 6000    HRFREQ                  
+FORWARD 800     -2500   2500    
+FILTER          
+        -600    -500    500     600     
+TGATE                   2WBT    2500    
+INVERSE                 
+*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+#*CALL   RADNPAR 6000    HRFREQ                  
+FORWARD 800     -2500   2500    
+FILTER          
+        -600    -500    500     600     
+TGATE                   3WBT    3500    
+INVERSE                 
+#*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+#*CALL   RADNPAR 6000    HRFREQ                  
+FORWARD 800     -2500   2500    
+FILTER          
+        -600    -500    500     600     
+TGATE                   4WBT    3500    
+INVERSE                 
+#*CALL   MUTE                            
+VFMUTE          
+WBTmute                                                                         
+*CALL   NMO     NMOREM                  
+VEL             
+vel_1                                                                           
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh_f2_d_s_r2                                                 
+*END            

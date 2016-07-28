@@ -1,0 +1,11 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090505_g_f_gh_f2_d_s_w_r                                                
+ORDER   CDP     offset  
+RANGE   7455    34970   200     1000    
+#*CALL   RESAMP  8                               
+*CALL   AGC     500             
+*CALL   VELDEF          MODIFY  
+VEL             
+vel_2                                                                           
+*END            

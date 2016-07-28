@@ -1,0 +1,7 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   F2.GERFF3R3                                                             
+*CALL   RNA                             
+*CALL   DSOUT   OVERWRT                                 
+LABEL   F2.GERFF3R3R                                                            
+*END            

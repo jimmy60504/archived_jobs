@@ -1,0 +1,33 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   CDP     OFFSET  
+LABEL   TaChia.FFDF                                                             
+#*CALL   NMO                             
+VEL             
+v03                                                                             
+#*CALL   MUTE                            
+STRETCH 45                              
+v03                                                                             
+#*CALL   AGC     100             
+#*CALL   STATPIK 6       6                       
+GATE            
+2000    60      300     
+2200    60      400     
+3300    200     600     
+3500    400     1000    
+CFNAME  /home/jimmy/jobs/TaChia/CF.DAT                                          
+DFNAME  /home/jimmy/jobs/TaChia/DF.DAT                                          
+#*CALL   STATANL                         10      
+COMSR           
+CFNAME  /home/jimmy/jobs/TaChia/CF.DAT                                          
+DFNAME  /home/jimmy/jobs/TaChia/DF.DAT                                          
+*CALL   QUIXTAT STATIC1                 0       
+ATTRI           
+SHOT    SSTAT   SHOT    SHOT    
+REC     SSTAT   STATION REC-STAT
+*CALL   SORT    192     999999  
+KEYS            
+SHOT                            
+*CALL   DSOUT   OVERWRT                                 
+LABEL   TaChia.FFDFR1                                                           
+*END            

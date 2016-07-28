@@ -1,0 +1,7 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   TaChia.FFD                                                              
+*CALL   PROFILE 1                               
+*CALL   DSOUT   OVERWRT                                 
+LABEL   TaChia.FFDg2                                                            
+*END            

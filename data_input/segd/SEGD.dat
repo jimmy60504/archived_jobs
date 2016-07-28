@@ -1,0 +1,11 @@
+*JOB            
+*CALL   SEGD    16384   2       468     8058    6250            
+TAPEOPT -flist TAPE50002.list                                                   
+BLKSIZE 64      
+SHDRDEF         
+shot    general                 73      BYTE    
+RECORD  1               INCR    656                     
+                
+*CALL   DSOUT   OVERWRT                                 
+LABEL   test                                                                    
+*END            

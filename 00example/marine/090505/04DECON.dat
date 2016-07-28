@@ -1,0 +1,29 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090501_g_se_f_ti_ms_gh_f                                                
+*CALL   HEADPUT WDEPTH          INTEGER                 
+ATTRI   CDP     WBT     WBT     CDP             
+*CALL   FILTER                                  MINIMUM 
+BAND                            
+                2       16      70      80      
+*CALL   STATIC  WDEPTH  REMOVE                          
+*CALL   DECONA                                                  
+KEYDEF  1       1       468     
+GAP     200     ZCROSS  2               
+5000    9000    3000    8000    0       14000   0       14000   
+KEYDEF  300     1       468     
+GAP     200     ZCROSS  2               
+4800    7500    2500    6000    0       14000   0       14000   
+KEYDEF  1200    1       468     
+GAP     200     ZCROSS  2               
+4000    6000    1500    4500    0       14000   0       14000   
+KEYDEF  2600    1       468     
+GAP     200     ZCROSS  2               
+4000    7000    0       3000    0       14000   0       14000   
+*CALL   STATIC  WDEPTH                                  
+*CALL   FILTER                                  MINIMUM 
+BAND                            
+                2       16      70      80      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090501_g_se_f_ti_ms_gh_f_dec                                            
+*END            

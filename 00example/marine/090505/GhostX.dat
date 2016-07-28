@@ -1,0 +1,36 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090505_g_f                                                              
+ORDER   shot    chan    
+PKEYLST         
+814     4310    
+*CALL   FILTER  shot                            MINIMUM 
+BAND    HP      HANN    20      
+                9       45                      
+*CALL   COHERE  20      13                      WITHIN  shot    
+                
+FILTERS         
+1       -9      10                                      
+*CALL   HEADPUT WBT                                     
+ATTRI   cdp     WBT1    WBT     CDP             
+*CALL   GHOSTX  8       2       9       2       1500            
+*CALL   FILTER  shot                            MINIMUM 
+BAND    BP      HANN    20      
+                9       20      75      80      
+*CALL   FILTER  shot                            MINIMUM 
+BAND    BP      HANN    20      
+                2       5       120     125     
+*CALL   FILTER  shot                            MINIMUM 
+BAND    BP      HANN    20      
+                2       5       120     125     
+*CALL   NMO                             
+VEL             
+vel1600                                                                         
+*CALL   STATIC  WBT     REMOVE                          
+*CALL   STATIC  WBT                                     
+*CALL   NMO     NMOREM                  
+VEL             
+vel1600                                                                         
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090505_g_f_gh                                                           
+*END            

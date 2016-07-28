@@ -1,0 +1,36 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   090501_g_se_f_ti_ms_gh_f_decN                                           
+ORDER   cdp             
+PKEYLST         
+22500   23600   
+*CALL   HXINT                                           
+*CALL   RADNLIN         
+FORWARD 300     -450    450     SLANTSTK
+*CALL   HDRMATH         
+DEFINE  pv      FLOAT           
+HCMUL   rayp    0.0015  pv      
+DEFINE  pv2     FLOAT           
+HCPOW   pv      2       pv2     
+DEFINE  mpv2    FLOAT           
+HCMUL   pv2     -1      mpv2    
+DEFINE  x       FLOAT           
+HCADD   mpv2    1       x       
+DEFINE  sqrt    FLOAT           
+HCPOW   x       0.5     sqrt    
+DEFINE  WDEPTH                  
+HHMUL   WBT     sqrt    WDEPTH  
+DEFINE  raypint                 
+HCADD   rayp    0       raypint 
+*CALL   DECONA  cdp     raypint                                 
+KEYDEF  1       -450    450     
+GAP     200     WDEPTH  0.9             
+0       14000   0       14000   0       14000   0       14000   
+*CALL   RADNLIN         
+INVERSE                         
+*CALL   EDIT    ixtyp           
+ALL                     
+1       
+*CALL   DSOUT   OVERWRT                                 
+LABEL   090501_g_se_f_ti_ms_gh_f_decN_tpD                                       
+*END            

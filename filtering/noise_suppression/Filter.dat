@@ -1,0 +1,17 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   shot    offset  
+LABEL   TaChia.edit                                                             
+PKEYLST         
+101     346     
+*CALL   TFCLEAN                                                 
+*CALL   AMPSCAL                                         
+GATES           
+                                        
+*CALL   ANFS    0.99    1000                                    
+*CALL   FILTER                                          
+BANDSL                          
+                20      20      880     20      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   TaChia.F                                                                
+*END            

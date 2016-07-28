@@ -1,0 +1,12 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_A.FM                                                                
+#*CALL   HDRMATH         
+HCSUB   soffset -2.5    soffset 
+*CALL   SMACTRM 1000                    
+SPREAD  -350    -62.5   12.5            3       
+HANDVEL         
+0       1500    500     2100    
+*CALL   DSOUT   OVERWRT                                 
+LABEL   SMACTRM                                                                 
+*END            

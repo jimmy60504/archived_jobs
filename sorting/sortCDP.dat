@@ -1,0 +1,8 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   DaTunSan.F                                                              
+ORDER   cdp     offset  
+*CALL   AGC     200             
+*CALL   DSOUT   OVERWRT                                 
+LABEL   DaTunSan.Fcdp                                                           
+*END            

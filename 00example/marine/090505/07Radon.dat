@@ -1,0 +1,22 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   CDP             
+LABEL   0625_geo_f_decon_srme                                                   
+*CALL   NMO                             
+VEL             
+v2                                                                              
+*CALL   RADNPAR 6000                            
+FORWARD 200     -784    784     
+FILTER          
+5200    0       0       0       0       
+6000    -750    -450    150     450     
+INVERSE                 
+*CALL   NMO     NMOREM                  
+VEL             
+v2                                                                              
+*CALL   MUTE    20                      
+VFMUTE          
+mute2                                                                           
+*CALL   DSOUT   OVERWRT                                 
+LABEL   0625_geo_f_decon_srme_radon2                                            
+*END            

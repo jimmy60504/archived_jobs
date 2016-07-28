@@ -1,0 +1,18 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_A.FMSDstackv2                                                       
+PKEYLST         
+32      4555    
+*CALL   HEADPUT WBT                                     
+ATTRI   cdp     WBT     WBT     CDP             
+*CALL   AGC                     
+*CALL   MIGDMO                  6.25    
+FKMIG           
+USERVEL         
+0       1550    100     1600    200     1650    300     1650    
+500     1650    1000    1700    
+*CALL   STATIC  WBT     REMOVE  -30                     
+*CALL   STATIC  WBT             -30                     
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_A.FMSDstackv2Mig                                                    
+*END            

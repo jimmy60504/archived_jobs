@@ -1,0 +1,35 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   E2p.E                                                                   
+ORDER   cdp     offset  
+#*CALL   REFSOL                  20      20              2800    
+                                
+PICKS   FBNET   PICK1   
+DBINPUT SUBWEATHVEL     DATUM   ELEV    MODEL1  
+STATION 1       1800    175     
+3000    120     350     
+STATION 61      1800    175     
+2900    120     350     
+STATION 101     1800    175     
+2800    120     350     
+STATION 121     1800    175     
+2700    120     350     
+STATION 151     1800    175     
+2500    120     350     
+STATION 181     1800    175     
+2500    120     350     
+STATION 281     1800    175     
+2400    120     350     
+*CALL   QUIXTAT STATIC1                         
+ATTRI           
+LSTATICSREFSOL  SHOT    SHOT    
+RSTATICSREFSOL  SHOT    SHOT    
+LSTATICSREFSOL  STATION REC_STAT
+RSTATICSREFSOL  STATION REC_STAT
+*CALL   SORT    192     999999  
+KEYS            
+shot                                    
+offset                                  
+*CALL   DSOUT   OVERWRT                                 
+LABEL   E2p.ER2                                                                 
+*END            

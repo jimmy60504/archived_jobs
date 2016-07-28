@@ -1,0 +1,17 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   TaChia.geom                                                             
+ORDER   shot    offset  
+PKEYLST         
+101     346     
+*CALL   IEDIT   EDIT2                                                   
+#*CALL   AUTEDT                  3               OMIT    
+GATE            SHOT            
+1       0       40      
+#*CALL   GAIN                    
+SPHDIV                                  
+VEL             
+v05                                                                             
+*CALL   DSOUT   OVERWRT                                 
+LABEL   TaChia.edit                                                             
+*END            

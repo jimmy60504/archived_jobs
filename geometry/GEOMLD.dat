@@ -1,0 +1,7 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_A                                                                   
+*CALL   GEOMLD                                  
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_A.geom                                                              
+*END            

@@ -1,0 +1,10 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   CDP     OFFSET  
+LABEL   TaChia.FFDRF                                                            
+RANGE   2200    4000    100     200     
+*CALL   AGC     200             
+*CALL   VELDEF          MODIFY  
+VEL             
+v04                                                                             
+*END            
