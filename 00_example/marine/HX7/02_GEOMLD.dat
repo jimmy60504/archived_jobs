@@ -1,0 +1,8 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_B                                                                   
+*CALL   STATIC                  -63.5                   
+*CALL   GEOMLD                                  
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_B.geom                                                              
+*END            

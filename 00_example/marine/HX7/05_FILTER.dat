@@ -1,0 +1,13 @@
+*JOB            
+*CALL   DSIN            0       3000    
+ORDER   shot    chan    
+LABEL   HX7_B.geom                                                              
+PKEYLST         
+1534    2636    
+*CALL   FILTER                                  MINIMUM         
+BANDSL  HP                      
+                4       30                      
+*CALL   TFCLEAN                                                 
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_B.F10                                                               
+*END            

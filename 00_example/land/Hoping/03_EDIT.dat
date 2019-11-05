@@ -1,0 +1,8 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   A.G                                                                     
+ORDER   shot    chan    
+*CALL   IEDIT   EDIT1                                                   
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A.GE                                                                    
+*END            

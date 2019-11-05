@@ -1,0 +1,36 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   MCL17.GR                                                                
+ORDER   ffid    offset  
+PKEYLST         
+10101   18415   
+*CALL   IEDIT   EDIT1                                                   
+*CALL   HDRMAN  
+STORE   ori     
+*CALL   HDRMATH         
+DEFINE  air     FLOAT           
+HCMUL   offset  0.78    air     
+*CALL   STATIC  air     REMOVE  -250                    
+*CALL   COHERE  250     11                      WITHIN  ffid    
+        0.1     
+KILL            
+FILTERS         
+1       -1      100                                     
+*CALL   COHERE  250     11                      WITHIN  ffid    
+REJECT          
+KILL            
+FILTERS         
+1       -100    -2                                      
+*CALL   COHERE  250     11                      WITHIN  ffid    
+REJECT          
+KILL            
+FILTERS         
+1       -100    -2                                      
+*CALL   STATIC  air             -250                    
+*CALL   HDRMAN  
+MATH            
+        ori     SUB             
+DELETE  ALL     
+*CALL   DSOUT   OVERWRT                                 
+LABEL   MCL17.GRlift                                                            
+*END            

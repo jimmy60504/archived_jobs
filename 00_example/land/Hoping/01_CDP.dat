@@ -1,0 +1,6 @@
+*JOB            
+*CALL   MKDATA                          
+*CALL   GEOM2D  CDPS    
+ORIGIN  38      325258.52690719 10      
+SCATTER 2       100     
+*END            

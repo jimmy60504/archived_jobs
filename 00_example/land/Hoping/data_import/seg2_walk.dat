@@ -1,0 +1,65 @@
+*JOB            
+*CALL   SEG2    3000    1       288     0       
+FILNAM  90101   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90101.dat
+FILNAM  90102   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90102.dat
+FILNAM  90103   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90103.dat
+FILNAM  90104   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90104.dat
+FILNAM  90105   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90105.dat
+FILNAM  90106   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90106.dat
+FILNAM  90107   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90107.dat
+FILNAM  90108   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90108.dat
+FILNAM  90109   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90109.dat
+FILNAM  90110   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90110.dat
+FILNAM  90201   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90201.dat
+FILNAM  90202   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90202.dat
+FILNAM  90203   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90203.dat
+FILNAM  90204   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90204.dat
+FILNAM  90205   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90205.dat
+FILNAM  90206   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90206.dat
+FILNAM  90207   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90207.dat
+FILNAM  90208   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90208.dat
+FILNAM  90209   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90209.dat
+FILNAM  90210   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90210.dat
+FILNAM  90211   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90211.dat
+FILNAM  90212   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90212.dat
+FILNAM  90213   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90213.dat
+FILNAM  90214   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90214.dat
+FILNAM  90215   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90215.dat
+FILNAM  90216   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90216.dat
+FILNAM  90217   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90217.dat
+FILNAM  90218   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90218.dat
+FILNAM  90219   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90219.dat
+FILNAM  90220   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90220.dat
+FILNAM  90221   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90221.dat
+FILNAM  90222   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90222.dat
+FILNAM  90223   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90223.dat
+FILNAM  90224   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90224.dat
+FILNAM  90301   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90301.dat
+FILNAM  90302   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90302.dat
+FILNAM  90303   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90303.dat
+FILNAM  90304   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90304.dat
+FILNAM  90305   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90305.dat
+FILNAM  90306   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90306.dat
+FILNAM  90307   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90307.dat
+FILNAM  90308   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90308.dat
+FILNAM  90309   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90309.dat
+FILNAM  90310   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90310.dat
+FILNAM  90311   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90311.dat
+FILNAM  90312   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90312.dat
+FILNAM  90313   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90313.dat
+FILNAM  90314   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90314.dat
+FILNAM  90315   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90315.dat
+FILNAM  90316   /mnt/6T_D/backup/Jimmy/HoPing2016/A/wk/90316.dat
+*CALL   HDRCNT          
+MIN     chan    chanmin 
+*CALL   HDRMATH         
+HHSUB   chan    chanmin chan    
+HCADD   chan    1       chan    
+HCSUB   ffid    59500   ffid    
+HCDIV   ffid    100     shot    
+HCMUL   shot    1000    shotchan
+HHADD   chan    shotchanshotchan
+HCADD   type    3       day     
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A_walk                                                                  
+*END            

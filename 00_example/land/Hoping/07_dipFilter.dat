@@ -1,0 +1,15 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   ffid    chan    
+LABEL   A.GEF                                                                   
+PKEYLST         
+10101   30816   
+*CALL   TFCLEAN                                                 
+*CALL   COHERE  20      13                      WITHIN  shot    
+                
+FILTERS         
+1       -2      3                                       
+*CALL   IEDIT   EDIT1                                                   
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A.GEFF                                                                  
+*END            

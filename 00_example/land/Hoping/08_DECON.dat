@@ -1,0 +1,19 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   A.GEFF                                                                  
+ORDER   ffid    chan    
+PKEYLST         
+10101   30816   
+*CALL   FILTER                                                  
+BANDSL                          
+                35      20      200     20      
+*CALL   DECONA  ffid                                            
+KEYDEF  10101   1       288     
+GAP     100     ZCROSS  2               
+250     2000    750     2500    0       3000    0       3000    
+*CALL   FILTER                                                  
+BANDSL                          
+                35      20      200     20      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A.GEFFD                                                                 
+*END            

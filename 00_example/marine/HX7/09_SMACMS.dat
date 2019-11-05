@@ -1,0 +1,10 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   SMACTRM                                                                 
+PKEYLST         
+1534    2636    
+*CALL   SMACMS  soffset         PONLY                           
+WINDOW                  50      25      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_B.FMS                                                               
+*END            

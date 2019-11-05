@@ -1,0 +1,10 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_B.FM                                                                
+*CALL   SMACTRM 1000                    
+SPREAD  -350    -62.5   12.5            3       
+HANDVEL         
+0       1500    
+*CALL   DSOUT   OVERWRT                                 
+LABEL   SMACTRM                                                                 
+*END            

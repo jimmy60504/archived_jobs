@@ -1,0 +1,24 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   A.GE                                                                    
+ORDER   shotchanshot    
+PKEYLST         
+101001  308288  
+*CALL   BALANCE         
+*CALL   FILTER  shotchan                                        
+NOTCH                   
+*CALL   FILTER  shotchan                                        
+NOTCH   120             
+*CALL   FILTER  shotchan                                        
+NOTCH   180             
+*CALL   ANFS    0.5     500                                     
+*CALL   TFCLEAN                                                 
+*CALL   SUPPRES                         
+FBAND   80      500                     
+*CALL   SUPPRES                         
+FBAND   0       40                      
+*CALL   STATIC          REMOVE  40                      
+*CALL   STATIC                  40                      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A.GEF                                                                   
+*END            

@@ -1,0 +1,10 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_A.geom                                                              
+*CALL   FILTER                                                  
+BAND    LP                      
+                                250     250     
+*CALL   RESAMP  2       6000    NOFILTER        
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_A.resamp                                                            
+*END            

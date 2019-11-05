@@ -1,0 +1,13 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_B.F                                                                 
+ORDER   offset  shot    
+*CALL   REGLO   5       12000   128     1000            
+SKEYLST shot    1534    1       1103    
+*CALL   SORT    24      1e8     
+KEYS            
+shot                                    
+chan                                    
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_B.Fin                                                               
+*END            

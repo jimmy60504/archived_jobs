@@ -1,8 +1,0 @@
-*JOB            
-*CALL   DSIN                            
-LABEL   TaChia.edit                                                             
-PKEYLST         
-161     346     
-*CALL   AGC     100             
-*CALL   FBNET   2035                            PICK2   
-*END            

@@ -1,0 +1,29 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   CDP     OFFSET  
+LABEL   A.GEFvsFD                                                               
+PKEYLST         
+38      1642    
+#*CALL   NMO                             
+VEL     PDSFILE 
+Stacking Velocity Section                                                       
+#*CALL   MUTE                            
+STRETCH 30                      PDSFILE 
+Stacking Velocity Section                                                       
+#*CALL   AGC     100             
+#*CALL   STATPIK 10      4                       
+GATE            
+1       120     500     
+CFNAME  /home/jimmy/jobs/Hoping/CF.DAT                                          
+DFNAME  /home/jimmy/jobs/Hoping/DF.DAT                                          
+#*CALL   STATANL                         10      
+COMSR           
+CFNAME  /home/jimmy/jobs/Hoping/CF.DAT                                          
+DFNAME  /home/jimmy/jobs/Hoping/DF.DAT                                          
+*CALL   QUIXTAT STATIC1                         
+ATTRI           
+SHOT    SSTAT   SHOT    SHOT    
+REC     SSTAT   STATION REC-STAT
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A.GEFvsFDR1                                                             
+*END            

@@ -1,0 +1,13 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   A.GEFvsFD                                                               
+ORDER   cdp     offset  
+RANGE   100     1500    100     100     
+*CALL   MUTE                            
+VFMUTE          
+mute                                                                            
+*CALL   AGC     200             
+*CALL   VELDEF          MODIFY  
+VEL             
+v2                                                                              
+*END            

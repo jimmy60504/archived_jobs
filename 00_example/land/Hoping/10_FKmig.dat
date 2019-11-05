@@ -1,0 +1,20 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   A.GEFFDstack                                                            
+PKEYLST         
+38      1642    
+*CALL   FXDECON         40      10                              
+ADDBACK         
+        50      
+*CALL   AGC                     
+*CALL   MIGDMO                  2       
+FKMIG           
+USERVEL         
+0       1300    100     1300    200     1350    300     1350    
+500     1400    1000    1450    
+*CALL   MUTE                            
+VFMUTE          
+mig                                                                             
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A.GEFFDstackMig2                                                        
+*END            

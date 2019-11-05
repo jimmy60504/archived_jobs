@@ -1,0 +1,10 @@
+*JOB            
+*CALL   DSIN                            
+ORDER   shot    chan    
+LABEL   A                                                                       
+PKEYLST         
+101     308     
+*CALL   GEOMLD                                  
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A.G                                                                     
+*END            

@@ -1,0 +1,17 @@
+*JOB            
+*CALL   SEGD    14000   2       108     8058    6250            
+TAPEOPT -flist /home/jimmy/jobs/China/SW_Taiwan/input_file.list                 
+BLKSIZE 64      
+FHDRDEF         
+shot            GENERAL 73                      
+RECORD  1               INCR    508                     
+                
+*CALL   HDRMATH         
+HCADD   ffid    0       shot    
+*CALL   FILTER                                          
+BAND    LP                      
+                                125     125     
+*CALL   RESAMP  4       14000   NOFILTER        
+*CALL   DSOUT   OVERWRT                                 
+LABEL   SW_Taiwan                                                               
+*END            

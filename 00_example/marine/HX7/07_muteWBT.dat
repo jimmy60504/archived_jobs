@@ -1,0 +1,21 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_B.Fin                                                               
+ORDER   CDP     offset  
+*CALL   HEADPUT WBT                                     
+ATTRI   CDP     WBT     WBT     CDP             
+*CALL   NMO                             
+VEL             
+v1500                                                                           
+*CALL   STATIC  WBT     REMOVE  -25                     
+*CALL   STATIC  WBT             -25                     
+*CALL   NMO     NMOREM                  
+VEL             
+v1500                                                                           
+*CALL   SORT    24      999999  
+KEYS            
+shot                                    
+chan                                    
+*CALL   DSOUT   OVERWRT                                 
+LABEL   HX7_B.FM                                                                
+*END            

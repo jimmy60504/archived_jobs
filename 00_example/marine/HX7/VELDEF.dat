@@ -1,0 +1,14 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   HX7_B.FMSD                                                              
+ORDER   cdp     offset  
+RANGE   100     6500    100     500     
+*CALL   FILTER                                                  
+BANDSL                          
+                20      30      100     30      
+#*CALL   STATIC                  -45                     
+*CALL   AGC     200             
+*CALL   VELDEF          MODIFY  
+VEL             
+v1                                                                              
+*END            

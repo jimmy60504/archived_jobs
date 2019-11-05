@@ -1,0 +1,24 @@
+*JOB            
+*CALL   DSIN                            
+LABEL   A.GEFFD                                                                 
+ORDER   cdp     offset  
+PKEYLST         
+38      1642    
+*CALL   MUTE                            
+VFMUTE          
+mute                                                                            
+*CALL   AGC     200             
+*CALL   NMO                             
+VEL             
+v2                                                                              
+*CALL   MUTE                            
+STRETCH 30                              
+v2                                                                              
+*CALL   STACK                                   
+*CALL   BALANCE         
+*CALL   FILTER                                                  
+BANDSL                          
+                30      30      200     30      
+*CALL   DSOUT   OVERWRT                                 
+LABEL   A.GEFFDstack                                                            
+*END            
